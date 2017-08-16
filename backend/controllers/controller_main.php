@@ -2,8 +2,6 @@
 
 namespace backend;
 
-use core\Controller;
-
 class Controller_Main extends Controller
 {
 

@@ -2,7 +2,7 @@
 
 namespace frontend;
 
-use core\Controller;
+require "../models/model_products.php";
 
 class Controller_Main extends Controller
 {

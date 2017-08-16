@@ -1,8 +1,6 @@
 <?php
 
-namespace core;
-
-use backend\View;
+namespace backend;
 
 class Controller {
 	
