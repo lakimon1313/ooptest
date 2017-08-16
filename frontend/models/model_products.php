@@ -3,6 +3,7 @@
 namespace frontend;
 
 use core\Model;
+use PDO;
 
 class Model_Products extends Model
 {
