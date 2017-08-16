@@ -2,7 +2,8 @@
 
 <html>
 <head>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/admin/css/bootstrap.min.css">
+    <script src="/admin/js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 <div class="container" style="margin-top: 40px">

@@ -2,34 +2,26 @@
 
 namespace backend;
 
-class Model_Product extends Model
+use core\Model;
+use PDO;
+
+class Model_Products extends Model
 {
 
-    public function authUser()
+    public function get_data()
     {
-        $data = $this->conn->prepare("SELECT id, password FROM user WHERE login='" . $_POST['login'] . "' LIMIT 1");
+        $sql = "SELECT *, b.name as brand FROM `products` p";
+        $sql .= " LEFT JOIN  `brands` b ON p.brand=b.id";
+
+        $data = $this->conn->prepare($sql);
         $data->execute();
 
-        if ($data->rowCount() > 0) {
-            if ($row = $data->fetch(PDO::FETCH_ASSOC)) {
-                $data = $row;
-            }
-        } else {
-            return false;
+        $result = $whItems = [];
+        while ($row = $data->fetch(PDO::FETCH_ASSOC)) {
+            $result[] = $row;
         }
 
-        if ($data['password'] === md5(md5($_POST['password']))) {
-            $hash = md5($this->generateCode(10));
-
-            $this->conn->prepare("UPDATE user SET hash='" . $hash . "' WHERE id='" . (int)$data['id'] . "'")->execute();
-            setcookie("id", $data['id'], time() + 60 * 60 * 24 * 30);
-            setcookie("hash", $hash, time() + 60 * 60 * 24 * 30);
-            $_SESSION['user_id'] = $data['id'];
-
-            return true;
-        } else {
-            return false;
-        }
+        return $result;
 
     }
 
