@@ -1,5 +1,9 @@
 <?php
 
+namespace frontend;
+
+use core\Model;
+
 class Model_Products extends Model
 {
 	

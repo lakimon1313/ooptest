@@ -1,5 +1,9 @@
 <?php
 
+namespace core;
+
+use backend\View;
+
 class Controller {
 	
 	public $model;

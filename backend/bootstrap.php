@@ -1,5 +1,7 @@
 <?php
 
+use backend\Route;
+
 require_once $_SERVER['DOCUMENT_ROOT'] . '/core/model.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/backend/back_core/view.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/core/controller.php';

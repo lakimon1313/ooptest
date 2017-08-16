@@ -1,5 +1,7 @@
 <?php
 
+namespace frontend;
+
 class Route
 {
 

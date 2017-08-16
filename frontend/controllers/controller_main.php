@@ -1,6 +1,8 @@
 <?php
 
-include $_SERVER['DOCUMENT_ROOT'] . '/frontend/models/model_products.php';
+namespace frontend;
+
+use core\Controller;
 
 class Controller_Main extends Controller
 {
