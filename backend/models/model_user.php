@@ -1,5 +1,10 @@
 <?php
 
+namespace backend;
+
+use core\Model;
+use PDO;
+
 class Model_User extends Model
 {
 

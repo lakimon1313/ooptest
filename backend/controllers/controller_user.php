@@ -1,5 +1,7 @@
 <?php
 
+namespace backend;
+
 class Controller_User extends Controller
 {
 
